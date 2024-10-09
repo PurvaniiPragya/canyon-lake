@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canyon Lake Contour Map</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', sans-serif;
+	    font-size: 14px;
+	    line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        .container {
+	    font-family: 'Lucida Sans', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%; 
+            height: auto;
+        }
+        h1 {
+            font-family: 'Lucida Sans', sans-serif;
+	    text-align: center;
+	    color: #003366;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .block-text {
+            font-family: 'Lucida Sans', sans-serif;
+            background-color: #e6f2ff;
+            padding: 10px;
+            border-left: 5px solid #003366;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+	}
+	.content-block {
+            font-family: 'Lucida Sans', sans-serif; 
+	    text-align: left;
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        p {
+            font-family: 'Lucida Sans', sans-serif;
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+        }
+        footer {
+	    font-family: 'Lucida Sans', sans-serif;
+            text-align: center;
+	    font-size: 1.05em;
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        a {
+	    font-family: 'Lucida Sans', sans-serif;
+	    font-size: 1.05em;
+            color: lightblue;
+            text-decoration: underline;
+        }
+        a:visited {
+	    font-family: 'Lucida Sans', sans-serif;
+	    font-size: 1.05em;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+	    <h1>Bathymetry Interpolation Project</h1>
+        <div class="block-text">
+   	 <p>Canyon Lake, located in South Texas, is a reservoir on the Guadalupe River. It was formed by the construction of the Canyon Dam in 1964 and is known for its recreational opportunities, including fishing, boating, and hiking. For more information, visit the <a href="https://en.wikipedia.org/wiki/Canyon_Lake_(Texas)" target="_blank">Canyon Lake Wikipedia page</a>.</p>
+	</div>
+
+        <div class="content-block">
+            <p>This map was created using data from the Texas Water Boards' lake surveys. I interpolated the depth points using the Triangulated Irregular Network (TIN) method, with the lake boundary defining the extents and the break lines representing island elevations. Then I incorporated detailed contour lines with precise intervals. As the contour elevations are relative to sea level and so to avoid the map readers not correctly deducing the depth, the color scheme has been adjusted with darker blues signifying the deepest points of the lake with a gradient to softer hues for shallower depths. To further enhance the water-like feel of the map, I chose white for the contour lines, tying the visual aesthetic to the subject matter. A subtle grid system is used to help viewers gauge distances, with the scale bar strategically placed between grid lines to avoid cluttering the map with coordinate information.</p>
+        </div>
+
+        <img src="contour_map.bmp" alt="Canyon Lake Contour Map">
+    </div>
+
+    <footer>
+        Made with QGIS | Purvanii Pragya<br>
+        Data source: <a href="https://www.twdb.texas.gov/" target="_blank">Texas Water Development Board</a>
+    </footer>
+</body>
+</html>
